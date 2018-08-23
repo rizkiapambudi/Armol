@@ -1,0 +1,20 @@
+cek bentuk unsur/ molekul
+
+problem:
+bisa banyak kombinasi unsur, tapi yang tampil cuma 1
+menu
+animasi
+
+
+note:
+size harus besar
+perubahan kontras warna
+
+
+belum cek:
+chi3, i kuning
+caso4
+h2so4, o biru muda, o kuning muda
+
+
+
