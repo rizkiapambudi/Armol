@@ -46,7 +46,7 @@ namespace Vuforia
                 ImageTarget it = tb.Trackable as ImageTarget;
                 Vector2 size = it.GetSize();
 
-                if (scanning.Length <= 0)
+  /*              if (scanning.Length <= 0)
                 {
                     scanning[0] = name;
                 }
@@ -66,7 +66,7 @@ namespace Vuforia
                 {
                     Debug.Log("Test Scanning" + scanning[i] );
                 }
-
+                */
 
 
                 //  TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus;

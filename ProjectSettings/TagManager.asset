@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Model1
+  - Model2
+  - Model3
+  - Model4
+  - Model5
+  - Model6
+  - Model7
+  - Model8
+  - Model9
+  - Model10
   layers:
   - Default
   - TransparentFX

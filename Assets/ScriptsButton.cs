@@ -81,14 +81,11 @@ public class ScriptsButton : MonoBehaviour
 	public void RotationRightButton ()
 	{
 		// transform.Rotate (0, -rotationSpeed * Time.deltaTime, 0);
-
- 
-        
-        for (int i = 1; i <= 119; i ++)
-       {
-            GameObject.FindWithTag("Model"+i).transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+        //for (int i = 1; i <= 119; i ++)
+       //{
+            GameObject.FindWithTag("Model1").transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
             
-        }
+        //}
        
 
     }
@@ -114,10 +111,10 @@ public class ScriptsButton : MonoBehaviour
     public void RotationLeftButton ()
 	{
         // transform.Rotate (0, rotationSpeed * Time.deltaTime, 0);
-        for (int i = 1; i <= 119; i++)
-        {
-            GameObject.FindWithTag("Model"+i).transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-        }
+        //for (int i = 1; i <= 119; i++)
+        //{
+            GameObject.FindWithTag("Model1").transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        //}
     } 
 //fungsi membuat tombol ulangi putar kanan
 	public void RotationRightButtonRepeat ()
