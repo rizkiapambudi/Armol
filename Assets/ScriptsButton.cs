@@ -72,50 +72,45 @@ public class ScriptsButton : MonoBehaviour
 
 	}
 
+	public void pauseAnim() {
+        // GameObject.FindWithTag("Model20").Animator.speed = 0;   
+	}
+
 		// Fungsi untuk menutup app button
 	public void CloseAppButton ()
 	{
 		Application.Quit ();
 	}
+
 		// Fungsi untuk memutar ke arah kanan
 	public void RotationRightButton ()
 	{
 		// transform.Rotate (0, -rotationSpeed * Time.deltaTime, 0);
-        //for (int i = 1; i <= 119; i ++)
-       //{
-            GameObject.FindWithTag("Model1").transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
-            
-        //}
-       
-
+        for (int i = 1; i <= 693; i ++)
+       {
+            GameObject.FindWithTag("Model"+i).transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);   
+        }
     }
 
     public void RotationUpButton()
     {
         // transform.Rotate (0, -rotationSpeed * Time.deltaTime, 0);
-
-
-
         for (int i = 1; i <= 119; i++)
         {
             GameObject.FindWithTag("Model" + i).transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime, 0);
-
         }
-
-
     }
-
-
 
     //fungsi membuat tombol putar kiri
     public void RotationLeftButton ()
 	{
         // transform.Rotate (0, rotationSpeed * Time.deltaTime, 0);
-        //for (int i = 1; i <= 119; i++)
-        //{
-            GameObject.FindWithTag("Model1").transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-        //}
+        for (int i = 1; i <= 693; i++)
+        {
+            GameObject.FindWithTag("Model"+i).transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        }
     } 
+
 //fungsi membuat tombol ulangi putar kanan
 	public void RotationRightButtonRepeat ()
 	{
@@ -138,7 +133,7 @@ public class ScriptsButton : MonoBehaviour
 	public void ScaleUpButton ()
 	{
         // transform.localScale += new Vector3(scalingSpeed, scalingSpeed, scalingSpeed);
-        for (int i = 1; i <= 119; i++)
+        for (int i = 1; i <= 693; i++)
         {
             GameObject.FindWithTag("Model"+i).transform.localScale += new Vector3(scalingSpeed, scalingSpeed, scalingSpeed);
         }
@@ -149,6 +144,18 @@ public class ScriptsButton : MonoBehaviour
 		repeatScaleUp = true;
 		Debug.Log ("Up");
 	}
+
+	//fungsi membuat tombol penurunan 
+    public void ScaleDownButton ()
+	{
+        // transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
+        for (int i = 1; i <= 693; i++)
+       {
+            GameObject.FindWithTag("Model"+i).transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
+        }
+       
+    }
+
 //fungsi membuat tomol ulang penurunan
 	public void ScaleDownButtonRepeat ()
 	{
@@ -241,16 +248,6 @@ public class ScriptsButton : MonoBehaviour
     }
 
 
-    //fungsi membuat tombol penurunan 
-    public void ScaleDownButton ()
-	{
-        // transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
-        for (int i = 1; i <= 119; i++)
-       {
-            GameObject.FindWithTag("Model"+i).transform.localScale += new Vector3(-scalingSpeed, -scalingSpeed, -scalingSpeed);
-        }
-       
-    }
 //fungsi membuat tombol posisi atas 
 	public void PositionUpButton ()
 	{

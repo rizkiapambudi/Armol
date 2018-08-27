@@ -5,6 +5,7 @@ Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Vuforia
 {
@@ -94,6 +95,14 @@ namespace Vuforia
             PanelScanMarker.gameObject.SetActive(false);
             TextTargetName.gameObject.SetActive(true);
             TextDescription.gameObject.SetActive(true);
+
+            if (mTrackableBehaviour.TrackableName == "Ag") {
+                TextDescription.GetComponent<Text>().text = "Ini merupakan unsur Ag, silahkan ambil kartu molekul .....";
+            } else if (mTrackableBehaviour.TrackableName == "AgBr" || mTrackableBehaviour.TrackableName == "BrAg") {
+                TextDescription.GetComponent<Text>().text = "Ini merupakan molekul AgBr, rrrrrrrrrrrrrr .....";
+            } else if (mTrackableBehaviour.TrackableName.Equals("AgI")) {
+                TextDescription.GetComponent<Text>().text = "Ini merupakan molekul AgI, IIIIIIIIIIII .....";
+            }
         }
 
 
