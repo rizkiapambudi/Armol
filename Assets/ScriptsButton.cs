@@ -8,6 +8,7 @@ public class ScriptsButton : MonoBehaviour
 	public float scalingSpeed = 0.01f; // mengatur sekla kecepatan
 	public float rotationSpeed = 70.0f; // mengatur kecepatan rotasi
 	public float translationSpeed = 5.0f; // mengatur kecepatan terjemah
+    //public Animator anim;
    
 //	public GameObject Model-->list fungsi yang dapat digunakan dengan perulangan;
 
@@ -73,7 +74,7 @@ public class ScriptsButton : MonoBehaviour
 	}
 
 	public void pauseAnim() {
-        // GameObject.FindWithTag("Model20").Animator.speed = 0;   
+        //anim.Play("Default Take");
 	}
 
 		// Fungsi untuk menutup app button
