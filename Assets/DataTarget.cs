@@ -20,32 +20,36 @@ namespace Vuforia
         void Update()
         {
 
+            // StateManager sm = TrackerManager.Instance.GetStateManager();
+            // IEnumerable<TrackableBehaviour> tbs = sm.GetActiveTrackableBehaviours();
+            // IEnumerable<TrackableBehaviour> tbs1 = sm.GetActiveTrackableBehaviours();
+            // IEnumerable<TrackableBehaviour> tbs2 = sm.GetActiveTrackableBehaviours();
+            // IEnumerable<TrackableBehaviour> tbs3 = sm.GetActiveTrackableBehaviours();
+            // IEnumerable<TrackableBehaviour> tbs4 = sm.GetActiveTrackableBehaviours();
+            // IEnumerable<TrackableBehaviour> tbs5 = sm.GetActiveTrackableBehaviours();
+            // IEnumerable<TrackableBehaviour> tbs6 = sm.GetActiveTrackableBehaviours();
+
             StateManager sm = TrackerManager.Instance.GetStateManager();
             IEnumerable<TrackableBehaviour> tbs = sm.GetActiveTrackableBehaviours();
-            IEnumerable<TrackableBehaviour> tbs1 = sm.GetActiveTrackableBehaviours();
-            IEnumerable<TrackableBehaviour> tbs2 = sm.GetActiveTrackableBehaviours();
-            IEnumerable<TrackableBehaviour> tbs3 = sm.GetActiveTrackableBehaviours();
-            IEnumerable<TrackableBehaviour> tbs4 = sm.GetActiveTrackableBehaviours();
-            IEnumerable<TrackableBehaviour> tbs5 = sm.GetActiveTrackableBehaviours();
-            IEnumerable<TrackableBehaviour> tbs6 = sm.GetActiveTrackableBehaviours();
+            foreach (TrackableBehaviour tb in tbs)
+            {
+                string name = tb.TrackableName;
+                //  TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus;
+                Debug.Log("Active image target:" + name);
+                TextDescription.GetComponent<Text>().text = "Ini adalah unsur/molekul " + name;
+            }
 
 
 
-
-
-            djdj++;
+            // djdj++;
             // Debug.Log("scanning" + djdj );
 
             // //FOREACH UNTUK MENGISI TEMP0 (Terdiri dari 1 unsur)
             // foreach (TrackableBehaviour tb in tbs)
             // {
-
-      
-
             //     string name = tb.TrackableName;
             //     ImageTarget it = tb.Trackable as ImageTarget;
             //     Vector2 size = it.GetSize();
-
 
             //     //  TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus;
             //     Debug.Log("Active image target:" + name + "  -size: " + size.x + ", " + size.y);
@@ -59,13 +63,13 @@ namespace Vuforia
             //         if (name == ("Ag-" + i) || name == ("Al-" + i) || name == ("Br-" + i) || name == ("C-" + i) || name == ("Ca-" + i) || name == ("Cl-" + i) || name == ("Cr-" + i) || name == ("Cu-" + i)
             //             || name == ("F-" + i) || name == ("Fe-" + i) || name == ("H-" + i) || name == ("l-" + i) || name == ("K-" + i) || name == ("Mg-" + i) || name == ("N-" + i) || name == ("Na-" + i) || name == ("O-" + i) || name == ("S-" + i) || name == ("Zn-" + i))
             //         {
-            //             TextTargetName.GetComponent<Text>().text = "Nama Unsur : " + name;
+            //             // TextTargetName.GetComponent<Text>().text = "Nama Unsur : " + name;
             //         }
 
             //     }
             //     if (name == "HCN" || name == "NaOH" || name == "AgBr" || name == "Agl" || name == "Al2O3" || name == "cac2" || name == "CaCO3" || name == "CaO" || name == "CaSO4" || name == "CCl2F2" || name == "CH3Br" || name == "CH3OH" || name == "CHCl3" || name == "CHl3" || name == "Cl2" || name == "CO" || name == "CO2" || name == "CrCl3" || name == "CrO" || name == "CuCl2" || name == "FeO" || name == "H2CO" || name == "H2O" || name == "H2SO4" || name == "HCL" || name == "HCLO" || name == "HF" || name == "HNO3" || name == "K2O" || name == "KBr" || name == "KCl" || name == "KCLO3" || name == "KI" || name == "KlO3" || name == "MgO" || name == "NaBr" || name == "NaCl" || name == "NaClO" || name == "NaClO2" || name == "NaF" || name == "NaHCO3" || name == "NaOCL" || name == "NH3" || name == "NH4Cl" || name == "NO2" || name == "O2" || name == "O3" || name == "SF6" || name == "SO2" || name == "ZnCl2")
             //     {
-            //         TextTargetName.GetComponent<Text>().text = "Nama Molekul : " + name;
+            //         // TextTargetName.GetComponent<Text>().text = "Nama Molekul : " + name;
             //     }
 
             //     TextDescription.gameObject.SetActive(true);
@@ -1184,7 +1188,7 @@ namespace Vuforia
             //         break;
             //     }
             //     //Untuk kombinasi Molekul 
-            //     /*if ((temp[0] == ("H-1") || temp[0] == ("H-2") || temp[0] == ("H-3") || temp[0] == ("H-4") || temp[0] == ("H-5") || temp[0] == ("H-6")) &&
+            //     if ((temp[0] == ("H-1") || temp[0] == ("H-2") || temp[0] == ("H-3") || temp[0] == ("H-4") || temp[0] == ("H-5") || temp[0] == ("H-6")) &&
             //         (temp[1] == ("H-1") || temp[1] == ("H-2") || temp[1] == ("H-3") || temp[1] == ("H-4") || temp[1] == ("H-5") || temp[1] == ("H-6")) &&
             //         (temp[2] == ("N-1") || temp[2] == ("N-2") || temp[2] == ("N-3"))
             //         )
@@ -1195,7 +1199,7 @@ namespace Vuforia
             //         temp[2] = name;
             //         break;
 
-            //     }*/
+            //     }
             //     //Untuk kombinasi Molekul H2CO
             //     if ((temp[0] == ("H-1") || temp[0] == ("H-2") || temp[0] == ("H-3") || temp[0] == ("H-4") || temp[0] == ("H-5")) &&
             //         (temp[1] == ("C-1") || temp[1] == ("C-3") || temp[1] == ("C-4") || temp[1] == ("C-5") || temp[1] == ("C-6")) &&

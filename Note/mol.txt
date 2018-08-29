@@ -1,20 +1,31 @@
-cek bentuk unsur/ molekul
 
 problem:
-bisa banyak kombinasi unsur, tapi yang tampil cuma 1
-menu
-animasi
+scan bisa banyak unsur, tapi yang tampil cuma 1 tergantung fokus kamera atau yang terbaca dulu. gak ada diform vvv
+
+image dan text aktif bersamaan? vvv
+contoh: marker CO2
+yang di proposal pakai kombinasi marker unsurnya, bukan langsung marker molekul
 
 
 note:
+versi unity: 2017.3.1f1
 size harus besar
-perubahan kontras warna
+perubahan kontras warna pengaruh
+ganti warna kurang jelas: contoh kuning, biru muda
+uppercase huruf pengaruh
+pakai 2:
+image recognition:
+1. unsur 1 huruf
+2. marker molekul ada angka
+text recognition:
+1. kombinasi marker unsur
+2. bukan angka
+3. bukan marker molekul
+4. bukan 1 huruf
 
 
-belum cek:
-chi3, i kuning
-caso4
-h2so4, o biru muda, o kuning muda
+
+
 
 
 

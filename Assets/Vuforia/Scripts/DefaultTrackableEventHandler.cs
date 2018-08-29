@@ -6,6 +6,8 @@ Confidential and Proprietary - Protected under copyright and other laws.
 
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Vuforia
 {
@@ -116,6 +118,8 @@ namespace Vuforia
                 TextDescription.GetComponent<Text>().text = "Ini merupakan unsur Mg atau Magnesium";
             } else if (mTrackableBehaviour.TrackableName == "Na") {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan unsur Na atau Natrium";
+            } else if (mTrackableBehaviour.TrackableName == "Zn") {
+                TextDescription.GetComponent<Text>().text = "Ini merupakan unsur Zn atau Zink (Seng)";
             } else if (
                 mTrackableBehaviour.TrackableName == "AgBr" || mTrackableBehaviour.TrackableName == "BrAg"
                 ) {
@@ -181,6 +185,28 @@ namespace Vuforia
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CH3Br atau Metil Bromide, berguna sebagai zat pemadam kebakaran";
             } else if (
+
+                mTrackableBehaviour.TrackableName == "CAOOOOS" || mTrackableBehaviour.TrackableName == "CAOOOSO" ||
+                mTrackableBehaviour.TrackableName == "CAOOSOO" || mTrackableBehaviour.TrackableName == "CAOSOOO" ||
+                mTrackableBehaviour.TrackableName == "CASOOOO" || mTrackableBehaviour.TrackableName == "OCAOOOS" ||
+                mTrackableBehaviour.TrackableName == "OCAOOSO" || mTrackableBehaviour.TrackableName == "OCAOSOO" ||
+                mTrackableBehaviour.TrackableName == "OCASOOO" || mTrackableBehaviour.TrackableName == "OOCAOOS" ||
+
+                mTrackableBehaviour.TrackableName == "OOCAOSO" || mTrackableBehaviour.TrackableName == "OOCASOO" ||
+                mTrackableBehaviour.TrackableName == "OOOCAOS" || mTrackableBehaviour.TrackableName == "OOOCASO" ||
+                mTrackableBehaviour.TrackableName == "OOOOCAS" || mTrackableBehaviour.TrackableName == "OOOOSCA" ||
+                mTrackableBehaviour.TrackableName == "OOOSCAO" || mTrackableBehaviour.TrackableName == "OOOSOCA" ||
+                mTrackableBehaviour.TrackableName == "OOSCAOO" || mTrackableBehaviour.TrackableName == "OOSOCAO" ||
+
+                mTrackableBehaviour.TrackableName == "OOSOOCA" || mTrackableBehaviour.TrackableName == "OSCAOOO" ||
+                mTrackableBehaviour.TrackableName == "OSOCAOO" || mTrackableBehaviour.TrackableName == "OSOOCAO" ||
+                mTrackableBehaviour.TrackableName == "OSOOOCA" || mTrackableBehaviour.TrackableName == "SCAOOOO" ||
+                mTrackableBehaviour.TrackableName == "SOCAOOO" || mTrackableBehaviour.TrackableName == "SOOCAOO" ||
+                mTrackableBehaviour.TrackableName == "SOOOCAO" || mTrackableBehaviour.TrackableName == "SOOOOCA"
+
+                ) {
+                TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CaSO4 atau Kalsium Sulfat, berguna sebagai pembuat gips";
+            }else if (
                 
                 mTrackableBehaviour.TrackableName == "CHIII" || mTrackableBehaviour.TrackableName == "CIHII" ||
                 mTrackableBehaviour.TrackableName == "CIIHI" || mTrackableBehaviour.TrackableName == "CIIIH" ||
@@ -205,52 +231,30 @@ namespace Vuforia
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CI2 atau Disinfekan, berguna sebagai pembunuh kuman";
             } else if (
                 
-                mTrackableBehaviour.TrackableName == "CaO" || mTrackableBehaviour.TrackableName == "OCa"
+                mTrackableBehaviour.TrackableName == "CAO" || mTrackableBehaviour.TrackableName == "OCA"
 
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CaO atau Kalsium Oksida, berguna sebagai gamping, semen, dan industri semen";
-            } else if (
-
-                mTrackableBehaviour.TrackableName == "CaOOOOS" || mTrackableBehaviour.TrackableName == "CaOOOSO" ||
-                mTrackableBehaviour.TrackableName == "CaOOSOO" || mTrackableBehaviour.TrackableName == "CaOSOOO" ||
-                mTrackableBehaviour.TrackableName == "CaSOOOO" || mTrackableBehaviour.TrackableName == "OCaOOOS" ||
-                mTrackableBehaviour.TrackableName == "OCaOOSO" || mTrackableBehaviour.TrackableName == "OCaOSOO" ||
-                mTrackableBehaviour.TrackableName == "OCaSOOO" || mTrackableBehaviour.TrackableName == "OOCaOOS" ||
-
-                mTrackableBehaviour.TrackableName == "OOCaOSO" || mTrackableBehaviour.TrackableName == "OOCaSOO" ||
-                mTrackableBehaviour.TrackableName == "OOOCaOS" || mTrackableBehaviour.TrackableName == "OOOCaSO" ||
-                mTrackableBehaviour.TrackableName == "OOOOCaS" || mTrackableBehaviour.TrackableName == "OOOOSCa" ||
-                mTrackableBehaviour.TrackableName == "OOOSCaO" || mTrackableBehaviour.TrackableName == "OOOSOCa" ||
-                mTrackableBehaviour.TrackableName == "OOSCaOO" || mTrackableBehaviour.TrackableName == "OOSOCaO" ||
-
-                mTrackableBehaviour.TrackableName == "OOSOOCa" || mTrackableBehaviour.TrackableName == "OSCaOOO" ||
-                mTrackableBehaviour.TrackableName == "OSOCaOO" || mTrackableBehaviour.TrackableName == "OSOOCaO" ||
-                mTrackableBehaviour.TrackableName == "OSOOOCa" || mTrackableBehaviour.TrackableName == "SCaOOOO" ||
-                mTrackableBehaviour.TrackableName == "SOCaOOO" || mTrackableBehaviour.TrackableName == "SOOCaOO" ||
-                mTrackableBehaviour.TrackableName == "SOOOCaO" || mTrackableBehaviour.TrackableName == "SOOOOCa"
-
-                ) {
-                TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CaSO4 atau Kalsium Sulfat, berguna sebagai pembuat gips";
-            } else if (
+            }  else if (
                 
-                mTrackableBehaviour.TrackableName == "CaCC" || mTrackableBehaviour.TrackableName == "CCaC" ||
-                mTrackableBehaviour.TrackableName == "CCCa"
+                mTrackableBehaviour.TrackableName == "CACC" || mTrackableBehaviour.TrackableName == "CCAC" ||
+                mTrackableBehaviour.TrackableName == "CCCA"
 
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CaC2 atau Kalsium Karbida, berguna sebagai pembuat gas asitelin untuk pengelas";
             } else if (
                 
-                mTrackableBehaviour.TrackableName == "CaCOOO" || mTrackableBehaviour.TrackableName == "CaOCOO" ||
-                mTrackableBehaviour.TrackableName == "CaOOCO" || mTrackableBehaviour.TrackableName == "CaOOOC" ||
-                mTrackableBehaviour.TrackableName == "CCaOOO" || mTrackableBehaviour.TrackableName == "COCaOO" ||
-                mTrackableBehaviour.TrackableName == "COOCaO" || mTrackableBehaviour.TrackableName == "COOOCa" ||
-                mTrackableBehaviour.TrackableName == "OCaCOO" || mTrackableBehaviour.TrackableName == "OCaOCO" ||
+                mTrackableBehaviour.TrackableName == "CACOOO" || mTrackableBehaviour.TrackableName == "CAOCOO" ||
+                mTrackableBehaviour.TrackableName == "CAOOCO" || mTrackableBehaviour.TrackableName == "CAOOOC" ||
+                mTrackableBehaviour.TrackableName == "CCAOOO" || mTrackableBehaviour.TrackableName == "COCAOO" ||
+                mTrackableBehaviour.TrackableName == "COOCAO" || mTrackableBehaviour.TrackableName == "COOOCA" ||
+                mTrackableBehaviour.TrackableName == "OCACOO" || mTrackableBehaviour.TrackableName == "OCAOCO" ||
 
-                mTrackableBehaviour.TrackableName == "OCaOOC" || mTrackableBehaviour.TrackableName == "OCCaOO" ||
-                mTrackableBehaviour.TrackableName == "OCOCaO" || mTrackableBehaviour.TrackableName == "OCOOCa" ||
-                mTrackableBehaviour.TrackableName == "OOCaCO" || mTrackableBehaviour.TrackableName == "OOCaOC" ||
-                mTrackableBehaviour.TrackableName == "OOCCaO" || mTrackableBehaviour.TrackableName == "OOCOCa" ||
-                mTrackableBehaviour.TrackableName == "OOOCaC" || mTrackableBehaviour.TrackableName == "OOOCCa"
+                mTrackableBehaviour.TrackableName == "OCAOOC" || mTrackableBehaviour.TrackableName == "OCCAOO" ||
+                mTrackableBehaviour.TrackableName == "OCOCAO" || mTrackableBehaviour.TrackableName == "OCOOCA" ||
+                mTrackableBehaviour.TrackableName == "OOCACO" || mTrackableBehaviour.TrackableName == "OOCAOC" ||
+                mTrackableBehaviour.TrackableName == "OOCCAO" || mTrackableBehaviour.TrackableName == "OOCOCA" ||
+                mTrackableBehaviour.TrackableName == "OOOCAC" || mTrackableBehaviour.TrackableName == "OOOCCA"
 
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CaCO3 atau Kalsium Karbonat, berguna sebagai pengecat bangunan";
@@ -294,7 +298,7 @@ namespace Vuforia
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CH3OH atau Metanol, berguna sebagai alkohol";
             } else if (
                 
-                mTrackableBehaviour.TrackableName == "CrO" || mTrackableBehaviour.TrackableName == "OCr"
+                mTrackableBehaviour.TrackableName == "CRO" || mTrackableBehaviour.TrackableName == "OCR"
 
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul CrO atau Kromium (II) Oksida, berguna sebagai pewarna dalam percetakan, industri tekstil dan keramik";
@@ -575,77 +579,77 @@ namespace Vuforia
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul NaF atau Natrium Flourida, berguna sebagai  pengawet kayu";
             } else if (
                 
-                mTrackableBehaviour.TrackableName == "CHNaOOO" || mTrackableBehaviour.TrackableName == "OCHNaOO" ||
-                mTrackableBehaviour.TrackableName == "CHONaOO" || mTrackableBehaviour.TrackableName == "OCHONaO" ||
-                mTrackableBehaviour.TrackableName == "CHOONaO" || mTrackableBehaviour.TrackableName == "OCHOONa" ||
-                mTrackableBehaviour.TrackableName == "CHOOONa" || mTrackableBehaviour.TrackableName == "OCNaHOO" ||
-                mTrackableBehaviour.TrackableName == "CNaHOOO" || mTrackableBehaviour.TrackableName == "OCNaOHO" ||
+                mTrackableBehaviour.TrackableName == "CHNAOOO" || mTrackableBehaviour.TrackableName == "OCHNAOO" ||
+                mTrackableBehaviour.TrackableName == "CHONAOO" || mTrackableBehaviour.TrackableName == "OCHONAO" ||
+                mTrackableBehaviour.TrackableName == "CHOONAO" || mTrackableBehaviour.TrackableName == "OCHOONA" ||
+                mTrackableBehaviour.TrackableName == "CHOOONA" || mTrackableBehaviour.TrackableName == "OCNAHOO" ||
+                mTrackableBehaviour.TrackableName == "CNAHOOO" || mTrackableBehaviour.TrackableName == "OCNAOHO" ||
 
-                mTrackableBehaviour.TrackableName == "CNaOHOO" || mTrackableBehaviour.TrackableName == "OCNaOOH" ||
-                mTrackableBehaviour.TrackableName == "CNaOOHO" || mTrackableBehaviour.TrackableName == "OCOHNaO" ||
-                mTrackableBehaviour.TrackableName == "CNaOOOH" || mTrackableBehaviour.TrackableName == "OCOHONa" ||
-                mTrackableBehaviour.TrackableName == "COHNaOO" || mTrackableBehaviour.TrackableName == "OCONaHO" ||
-                mTrackableBehaviour.TrackableName == "COHONaO" || mTrackableBehaviour.TrackableName == "OCONaOH" ||
+                mTrackableBehaviour.TrackableName == "CNAOHOO" || mTrackableBehaviour.TrackableName == "OCNAOOH" ||
+                mTrackableBehaviour.TrackableName == "CNAOOHO" || mTrackableBehaviour.TrackableName == "OCOHNAO" ||
+                mTrackableBehaviour.TrackableName == "CNAOOOH" || mTrackableBehaviour.TrackableName == "OCOHONA" ||
+                mTrackableBehaviour.TrackableName == "COHNAOO" || mTrackableBehaviour.TrackableName == "OCONAHO" ||
+                mTrackableBehaviour.TrackableName == "COHONAO" || mTrackableBehaviour.TrackableName == "OCONAOH" ||
 
-                mTrackableBehaviour.TrackableName == "COHOONa" || mTrackableBehaviour.TrackableName == "OCOOHNa" ||
-                mTrackableBehaviour.TrackableName == "CONaHOO" || mTrackableBehaviour.TrackableName == "OCOONaH" ||
-                mTrackableBehaviour.TrackableName == "CONaOHO" || mTrackableBehaviour.TrackableName == "OHCNaOO" ||
-                mTrackableBehaviour.TrackableName == "CONaOOH" || mTrackableBehaviour.TrackableName == "OHCONaO" ||
-                mTrackableBehaviour.TrackableName == "COOHNaO" || mTrackableBehaviour.TrackableName == "OHCOONa" ||
+                mTrackableBehaviour.TrackableName == "COHOONA" || mTrackableBehaviour.TrackableName == "OCOOHNA" ||
+                mTrackableBehaviour.TrackableName == "CONAHOO" || mTrackableBehaviour.TrackableName == "OCOONAH" ||
+                mTrackableBehaviour.TrackableName == "CONAOHO" || mTrackableBehaviour.TrackableName == "OHCNAOO" ||
+                mTrackableBehaviour.TrackableName == "CONAOOH" || mTrackableBehaviour.TrackableName == "OHCONAO" ||
+                mTrackableBehaviour.TrackableName == "COOHNAO" || mTrackableBehaviour.TrackableName == "OHCOONA" ||
 
-                mTrackableBehaviour.TrackableName == "COOHONa" || mTrackableBehaviour.TrackableName == "OHNaCOO" ||
-                mTrackableBehaviour.TrackableName == "COONaHO" || mTrackableBehaviour.TrackableName == "OHNaOCO" ||
-                mTrackableBehaviour.TrackableName == "COONaOH" || mTrackableBehaviour.TrackableName == "OHNaOOC" ||
-                mTrackableBehaviour.TrackableName == "COOOHNa" || mTrackableBehaviour.TrackableName == "OHOCNaO" ||
-                mTrackableBehaviour.TrackableName == "COOONaH" || mTrackableBehaviour.TrackableName == "OHOCONa" ||
+                mTrackableBehaviour.TrackableName == "COOHONA" || mTrackableBehaviour.TrackableName == "OHNACOO" ||
+                mTrackableBehaviour.TrackableName == "COONAHO" || mTrackableBehaviour.TrackableName == "OHNAOCO" ||
+                mTrackableBehaviour.TrackableName == "COONAOH" || mTrackableBehaviour.TrackableName == "OHNAOOC" ||
+                mTrackableBehaviour.TrackableName == "COOOHNA" || mTrackableBehaviour.TrackableName == "OHOCNAO" ||
+                mTrackableBehaviour.TrackableName == "COOONAH" || mTrackableBehaviour.TrackableName == "OHOCONA" ||
 
-                mTrackableBehaviour.TrackableName == "HCNaOOO" || mTrackableBehaviour.TrackableName == "OHONaCO" ||
-                mTrackableBehaviour.TrackableName == "HCONaOO" || mTrackableBehaviour.TrackableName == "OHONaOC" ||
-                mTrackableBehaviour.TrackableName == "HCOONaO" || mTrackableBehaviour.TrackableName == "OHOOCNa" ||
-                mTrackableBehaviour.TrackableName == "HCOOONa" || mTrackableBehaviour.TrackableName == "OHOONaC" ||
-                mTrackableBehaviour.TrackableName == "HNaCOOO" || mTrackableBehaviour.TrackableName == "ONaCHOO" ||
+                mTrackableBehaviour.TrackableName == "HCNAOOO" || mTrackableBehaviour.TrackableName == "OHONACO" ||
+                mTrackableBehaviour.TrackableName == "HCONAOO" || mTrackableBehaviour.TrackableName == "OHONAOC" ||
+                mTrackableBehaviour.TrackableName == "HCOONAO" || mTrackableBehaviour.TrackableName == "OHOOCNA" ||
+                mTrackableBehaviour.TrackableName == "HCOOONA" || mTrackableBehaviour.TrackableName == "OHOONAC" ||
+                mTrackableBehaviour.TrackableName == "HNACOOO" || mTrackableBehaviour.TrackableName == "ONACHOO" ||
 
-                mTrackableBehaviour.TrackableName == "HNaOCOO" || mTrackableBehaviour.TrackableName == "ONaCOHO" ||
-                mTrackableBehaviour.TrackableName == "HNaOOCO" || mTrackableBehaviour.TrackableName == "ONaCOOH" ||
-                mTrackableBehaviour.TrackableName == "HNaOOOC" || mTrackableBehaviour.TrackableName == "ONaHCOO" ||
-                mTrackableBehaviour.TrackableName == "HOCNaOO" || mTrackableBehaviour.TrackableName == "ONaHOCO" ||
-                mTrackableBehaviour.TrackableName == "HOCONaO" || mTrackableBehaviour.TrackableName == "ONaHOOC" ||
+                mTrackableBehaviour.TrackableName == "HNAOCOO" || mTrackableBehaviour.TrackableName == "ONACOHO" ||
+                mTrackableBehaviour.TrackableName == "HNAOOCO" || mTrackableBehaviour.TrackableName == "ONACOOH" ||
+                mTrackableBehaviour.TrackableName == "HNAOOOC" || mTrackableBehaviour.TrackableName == "ONAHCOO" ||
+                mTrackableBehaviour.TrackableName == "HOCNAOO" || mTrackableBehaviour.TrackableName == "ONAHOCO" ||
+                mTrackableBehaviour.TrackableName == "HOCONAO" || mTrackableBehaviour.TrackableName == "ONAHOOC" ||
 
-                mTrackableBehaviour.TrackableName == "HOCOONa" || mTrackableBehaviour.TrackableName == "ONaOCHO" ||
-                mTrackableBehaviour.TrackableName == "HONaCOO" || mTrackableBehaviour.TrackableName == "ONaOCOH" ||
-                mTrackableBehaviour.TrackableName == "HONaOCO" || mTrackableBehaviour.TrackableName == "ONaOHCO" ||
-                mTrackableBehaviour.TrackableName == "HONaOOC" || mTrackableBehaviour.TrackableName == "ONaOHOC" ||
-                mTrackableBehaviour.TrackableName == "HOOCNaO" || mTrackableBehaviour.TrackableName == "ONaOOCH" ||
+                mTrackableBehaviour.TrackableName == "HOCOONA" || mTrackableBehaviour.TrackableName == "ONAOCHO" ||
+                mTrackableBehaviour.TrackableName == "HONACOO" || mTrackableBehaviour.TrackableName == "ONAOCOH" ||
+                mTrackableBehaviour.TrackableName == "HONAOCO" || mTrackableBehaviour.TrackableName == "ONAOHCO" ||
+                mTrackableBehaviour.TrackableName == "HONAOOC" || mTrackableBehaviour.TrackableName == "ONAOHOC" ||
+                mTrackableBehaviour.TrackableName == "HOOCNAO" || mTrackableBehaviour.TrackableName == "ONAOOCH" ||
 
-                mTrackableBehaviour.TrackableName == "HOOCONa" || mTrackableBehaviour.TrackableName == "ONaOOHC" ||
-                mTrackableBehaviour.TrackableName == "HOONaCO" || mTrackableBehaviour.TrackableName == "OOCHNaO" ||
-                mTrackableBehaviour.TrackableName == "HOONaOC" || mTrackableBehaviour.TrackableName == "OOCHONa" ||
-                mTrackableBehaviour.TrackableName == "HOOOCNa" || mTrackableBehaviour.TrackableName == "OOCNaHO" ||
-                mTrackableBehaviour.TrackableName == "HOOONaC" || mTrackableBehaviour.TrackableName == "OOCNaOH" ||
+                mTrackableBehaviour.TrackableName == "HOOCONA" || mTrackableBehaviour.TrackableName == "ONAOOHC" ||
+                mTrackableBehaviour.TrackableName == "HOONACO" || mTrackableBehaviour.TrackableName == "OOCHNAO" ||
+                mTrackableBehaviour.TrackableName == "HOONAOC" || mTrackableBehaviour.TrackableName == "OOCHONA" ||
+                mTrackableBehaviour.TrackableName == "HOOOCNA" || mTrackableBehaviour.TrackableName == "OOCNAHO" ||
+                mTrackableBehaviour.TrackableName == "HOOONAC" || mTrackableBehaviour.TrackableName == "OOCNAOH" ||
 
-                mTrackableBehaviour.TrackableName == "NaCHOOO" || mTrackableBehaviour.TrackableName == "OOCOHNa" ||
-                mTrackableBehaviour.TrackableName == "NaCOHOO" || mTrackableBehaviour.TrackableName == "OOCONaH" ||
-                mTrackableBehaviour.TrackableName == "NaCOOHO" || mTrackableBehaviour.TrackableName == "OOHCNaO" ||
-                mTrackableBehaviour.TrackableName == "NaCOOOH" || mTrackableBehaviour.TrackableName == "OOHCONa" ||
-                mTrackableBehaviour.TrackableName == "NaHCOOO" || mTrackableBehaviour.TrackableName == "OOHNaCO" ||
+                mTrackableBehaviour.TrackableName == "NACHOOO" || mTrackableBehaviour.TrackableName == "OOCOHNA" ||
+                mTrackableBehaviour.TrackableName == "NACOHOO" || mTrackableBehaviour.TrackableName == "OOCONAH" ||
+                mTrackableBehaviour.TrackableName == "NACOOHO" || mTrackableBehaviour.TrackableName == "OOHCNAO" ||
+                mTrackableBehaviour.TrackableName == "NACOOOH" || mTrackableBehaviour.TrackableName == "OOHCONA" ||
+                mTrackableBehaviour.TrackableName == "NAHCOOO" || mTrackableBehaviour.TrackableName == "OOHNACO" ||
 
-                mTrackableBehaviour.TrackableName == "NaHOCOO" || mTrackableBehaviour.TrackableName == "OOHNaOC" ||
-                mTrackableBehaviour.TrackableName == "NaHOOCO" || mTrackableBehaviour.TrackableName == "OOHOCNa" ||
-                mTrackableBehaviour.TrackableName == "NaHOOOC" || mTrackableBehaviour.TrackableName == "OOHONaC" ||
-                mTrackableBehaviour.TrackableName == "NaOCHOO" || mTrackableBehaviour.TrackableName == "OONaCHO" ||
-                mTrackableBehaviour.TrackableName == "NaOCOHO" || mTrackableBehaviour.TrackableName == "OONaCOH" ||
+                mTrackableBehaviour.TrackableName == "NAHOCOO" || mTrackableBehaviour.TrackableName == "OOHNAOC" ||
+                mTrackableBehaviour.TrackableName == "NAHOOCO" || mTrackableBehaviour.TrackableName == "OOHOCNA" ||
+                mTrackableBehaviour.TrackableName == "NAHOOOC" || mTrackableBehaviour.TrackableName == "OOHONAC" ||
+                mTrackableBehaviour.TrackableName == "NAOCHOO" || mTrackableBehaviour.TrackableName == "OONACHO" ||
+                mTrackableBehaviour.TrackableName == "NAOCOHO" || mTrackableBehaviour.TrackableName == "OONACOH" ||
 
-                mTrackableBehaviour.TrackableName == "NaOCOOH" || mTrackableBehaviour.TrackableName == "OONaHCO" ||
-                mTrackableBehaviour.TrackableName == "NaOHCOO" || mTrackableBehaviour.TrackableName == "OONaHOC" ||
-                mTrackableBehaviour.TrackableName == "NaOHOCO" || mTrackableBehaviour.TrackableName == "OONaOCH" ||
-                mTrackableBehaviour.TrackableName == "NaOHOOC" || mTrackableBehaviour.TrackableName == "OONaOHC" ||
-                mTrackableBehaviour.TrackableName == "NaOOCHO" || mTrackableBehaviour.TrackableName == "OOOCHNa" ||
+                mTrackableBehaviour.TrackableName == "NAOCOOH" || mTrackableBehaviour.TrackableName == "OONAHCO" ||
+                mTrackableBehaviour.TrackableName == "NAOHCOO" || mTrackableBehaviour.TrackableName == "OONAHOC" ||
+                mTrackableBehaviour.TrackableName == "NAOHOCO" || mTrackableBehaviour.TrackableName == "OONAOCH" ||
+                mTrackableBehaviour.TrackableName == "NAOHOOC" || mTrackableBehaviour.TrackableName == "OONAOHC" ||
+                mTrackableBehaviour.TrackableName == "NAOOCHO" || mTrackableBehaviour.TrackableName == "OOOCHNA" ||
 
-                mTrackableBehaviour.TrackableName == "NaOOCOH" || mTrackableBehaviour.TrackableName == "OOOCNaH" ||
-                mTrackableBehaviour.TrackableName == "NaOOHCO" || mTrackableBehaviour.TrackableName == "OOOHCNa" ||
-                mTrackableBehaviour.TrackableName == "NaOOHOC" || mTrackableBehaviour.TrackableName == "OOOHNaC" ||
-                mTrackableBehaviour.TrackableName == "NaOOOCH" || mTrackableBehaviour.TrackableName == "OOONaCH" ||
-                mTrackableBehaviour.TrackableName == "NaOOOHC" || mTrackableBehaviour.TrackableName == "OOONaHC"
+                mTrackableBehaviour.TrackableName == "NAOOCOH" || mTrackableBehaviour.TrackableName == "OOOCNAH" ||
+                mTrackableBehaviour.TrackableName == "NAOOHCO" || mTrackableBehaviour.TrackableName == "OOOHCNA" ||
+                mTrackableBehaviour.TrackableName == "NAOOHOC" || mTrackableBehaviour.TrackableName == "OOOHNAC" ||
+                mTrackableBehaviour.TrackableName == "NAOOOCH" || mTrackableBehaviour.TrackableName == "OOONACH" ||
+                mTrackableBehaviour.TrackableName == "NAOOOHC" || mTrackableBehaviour.TrackableName == "OOONAHC"
 
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul NaHCO3 atau Soda Kue, berguna sebagai bahan pembuat kue";
@@ -700,7 +704,7 @@ namespace Vuforia
 
                 ) {
                 TextDescription.GetComponent<Text>().text = "Ini merupakan molekul ZnCl2 atau Seng Klorida, berguna sebagai bahan pematri (solder)";
-            } 
+            }
 
         }
 
